@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+@import "mixins";
+@import "variables";
+
+body, h1, h2, p, address, a, button {
+  @extend %nice-fonts;
+}
+
+body {
+  font-family: Raleway, sans-serif;
+  background: url(images/background1.png) no-repeat top center #f9f8fb;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.site-header {
+  padding-top: 45px;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-logo {
+    font-family: Pacifico, cursive;
+    font-weight: 400;
+    font-size: 50px;
+    margin: 0;
+  }
+
+  .main-menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+  }
+
+  .main-menu-item a {
+    color: $dark-color;
+    text-decoration: none;
+    display: block;
+    border-top: 3px solid transparent;
+    padding-top: 5px;
+    transition: border-top-color 0.2s;
+    margin-right: 35px;
+    font-size: 16px;
+
+    &:hover {
+      border-top-color: $primary-color;
+    }
+  }
+
+  .main-menu-item.active a {
+    border-top-color: $primary-color;
+
+    &:hover {
+      border-top-color: darken($primary-color, 30%);
+    }
+  }
+
+  .main-menu-item:last-child a {
+    margin-right: 0;
+  }
+}
+
+.section-fresh {
+  height: 900px;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+
+  &::after {
+    content: url(images/scroll.png);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 70px;
+  }
+
+  .container {
+    padding-bottom: 200px;
+    display: flex;
+    align-items: center;
+  }
+
+  .section-fresh-content {
+    max-width: 380px;
+  }
+
+  .section-fresh-title {
+    font-size: 60px;
+    font-weight: 900;
+    margin: 0;
+  }
+
+  .section-fresh-text {
+    margin: 30px 0;
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  .section-fresh-action {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    height: 55px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 200px;
+    border: none;
+    background: $primary-color;
+    color: white;
+    box-shadow: 0 20px 30px transparentize($primary-color, 0.7);
+  }
+}
+
+.section-about-us {
+  background-color: $green-color;
+  padding: 1rem 0;
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    .background {
+      width: 50%;
+      img {
+        max-width: 100%;
+      }
+    }
+    .about-us-content {
+      color: #ffffff;
+      width: 50%;
+      align-self: center;
+      margin: auto 3rem;
+      h2 {
+        font-size: 4rem;
+        margin: 0.5rem 0;
+      }
+    }
+  }
+}
+
+.section-gallery {
+  background: $yellow-color;
+  padding: 3rem 0;
+  .container {
+    text-align: center;
+    width: 100%;
+    .gallery-text-wrapper {
+      max-width: 580px;
+      margin: 0 auto;
+      text-align: center;
+      h2 {
+        font-size: 4rem;
+        margin: 1rem 0;
+      }
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+  .section-gallery-action {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    height: 55px;
+    padding: 0;
+    margin: 2em 0 0 0;
+    box-sizing: border-box;
+    width: 200px;
+    border: none;
+    background: #5685a3;
+    color: white;
+    box-shadow: 0 5px 20px transparentize(#5685a3, 0.1);
+  }
+
+  .gallery-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    img[src="images/galery1.png"] {
+      box-shadow: 0 5px 20px transparentize(#000, 0.1);
+      height: 457px;
+    }
+    .small-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      figure {
+        margin: 0.5rem;
+
+      }
+    }
+  }
+}
+
+
+.site-footer {
+  background: $dark-color;
+  color: white;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+  }
+
+  .footer-author, .footer-copyright, .footer-logo {
+    margin: 0;
+    flex: 1;
+  }
+
+  .footer-copyright {
+    font-style: normal;
+  }
+
+  .footer-logo {
+    font-family: Pacifico, cursive;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .footer-author {
+    text-align: right;
+
+    strong {
+      color: $primary-color;
+    }
+  }
+}
+
