@@ -6,30 +6,30 @@
 
 Variables, functions, strings methods and numbers.
 
-#### Exercise 07
+#### Exercise 07 JavaScript
 
 Arrays and objects
 
-#### Exercise 09
+#### Exercise 09 JavaScript
 
 Arrays and objects + html
 
-#### Exercise 10
+#### Exercise 10 NPM
 
 NPM, webpack
 
-#### Exercise 11
+#### Exercise 11 React
 
 Simple app in React + Material UI
 
-#### Exercise 12
+#### Exercise 12 React
 
 Todo app in React
 
-#### Exercise 13
+#### Exercise 13 React
 
 Contacts list in React
 
-#### Exercise 14
+#### Exercise 14 React
 
 Contact list in React with Redux
